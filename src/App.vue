@@ -406,19 +406,19 @@ export default {
         grid: {
           type: "dot",
           color: "#f8fafdb3",
-          size: 10,
+          size: 8,
           snap: true,
         },
         guides: {
           horizontal: [
-            /*{ position: 80, label: "Guide 1" },
+            { position: 80, label: "Guide 1" },
             { position: 160, label: "Guide 2" },
-            { position: 240, label: "Guide 3" },*/
+            { position: 240, label: "Guide 3" },
           ],
           vertical: [
-            /*{ position: 160, label: "Guide 1" },
+            { position: 160, label: "Guide 1" },
             { position: 320, label: "Guide 2" },
-            { position: 480, label: "Guide 3" },*/
+            { position: 480, label: "Guide 3" },
           ],
         },
         miniMap: {
@@ -430,7 +430,7 @@ export default {
           {
             id: 1,
             width: 100,
-            height: 50,
+            height: 300,
             x: 0,
             y: 0,
             selected: false,

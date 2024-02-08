@@ -109,7 +109,6 @@
       justify-content: center;
       width: 100%;
       height: 5px;
-      cursor: ns-resize;
       user-select: none;
 
       .design-horizontal-guide-indicator {
@@ -130,18 +129,6 @@
         width: 100%;
         background-color: $design-guide-color;
         pointer-events: none;
-      }
-
-      &.active, &:hover {
-        .design-horizontal-guide-line {
-          background-color: $design-guide-active-color !important;
-        }
-        .design-horizontal-guide-label {
-          display: flex;
-        }
-        .design-horizontal-guide-indicator {
-          display: block;
-        }
       }
 
       &.label-always-visible {
@@ -183,7 +170,6 @@
       justify-content: center;
       width: 5px;
       height: 100%;
-      cursor: ew-resize;
       user-select: none;
       
       .design-vertical-guide-indicator {
@@ -204,18 +190,6 @@
         height: 100%;
         background-color: $design-guide-color;
         pointer-events: none;
-      }
-
-      &.active, &:hover {
-        .design-vertical-guide-line {
-          background-color: $design-guide-active-color !important;
-        }
-        .design-vertical-guide-label {
-          display: flex;
-        }
-        .design-vertical-guide-indicator {
-          display: block;
-        }
       }
 
       &.label-always-visible {
@@ -412,6 +386,35 @@
         }
       }
 
+      .design-component-label {
+        position: absolute;
+        display: none;
+        flex-direction: column;
+        top: 50%;
+        right: -8px;
+        padding: 8px;
+        font-size: 12px;
+        color: $toolbar-color;
+        background-color: $design-surface-minimap-background-color;
+        border-radius: $toolbar-button-border-radius;
+        border: 1px solid $design-surface-minimap-border-color;
+        pointer-events: none;
+        box-shadow: $design-surface-minimap-shadow;
+        white-space: nowrap;
+        z-index: 99;
+        transform: translateX(100%) translateY(-50%);
+
+        .design-component-label-position-x, .design-component-label-position-y {
+          color: $design-guide-active-color;
+          &:not(:last-child) {
+            margin-right: 4px;
+          }
+        }
+        .design-component-label-position-indicator {
+          opacity: 0.5;
+        }
+      }
+
       &.selected {
         .design-component-corner-handle {
           display: flex;
@@ -423,6 +426,12 @@
           display: block;
         }
       }
+
+      &.dragging {
+        .design-component-label {
+          display: flex;
+        }
+      }
     }
 
     &:has(.design-component.dragging) {
@@ -430,6 +439,41 @@
 
       .design-component {
         pointer-events: none;
+      }
+    }
+
+    &:not(:has(.design-component.dragging)) {
+      .design-horizontal-guide {
+        cursor: ns-resize;
+
+        &.active, &:hover {
+          .design-horizontal-guide-line {
+            background-color: $design-guide-active-color !important;
+            z-index: 9999;
+          }
+          .design-horizontal-guide-label {
+            display: flex;
+          }
+          .design-horizontal-guide-indicator {
+            display: block;
+          }
+        }
+      }
+      .design-vertical-guide {
+        cursor: ew-resize;
+
+        &.active, &:hover {
+          .design-vertical-guide-line {
+            background-color: $design-guide-active-color !important;
+            z-index: 9999;
+          }
+          .design-vertical-guide-label {
+            display: flex;
+          }
+          .design-vertical-guide-indicator {
+            display: block;
+          }
+        }
       }
     }
   }

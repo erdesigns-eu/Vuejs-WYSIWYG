@@ -91,7 +91,7 @@ export default {
     zoom: {
       type: Number,
       default: 100,
-      validator: (value) => value > 100 && value < 1000,
+      validator: (value) => value > 50 && value < 1000,
     },
     grid: {
       type: Boolean,
@@ -114,7 +114,7 @@ export default {
     },
     gridSize: {
       type: Number,
-      validator: (value) => value > 5 && value < 100,
+      validator: (value) => value >= 5 && value < 100,
       default: 8,
     },
     minimap: {
@@ -232,7 +232,7 @@ export default {
         ctx.font = "10px";
 
         const adjustedGridSize = this.gridSize * (this.zoom / 100);
-        const minimumSpacing = 5;
+        const minimumSpacing = 2;
 
         const minorTickSpacing = adjustedGridSize;
         const majorTickSpacing = adjustedGridSize * 10;
@@ -275,7 +275,7 @@ export default {
         ctx.font = "10px";
 
         const adjustedGridSize = this.gridSize * (this.zoom / 100);
-        const minimumSpacing = 5;
+        const minimumSpacing = 2;
 
         const minorTickSpacing = adjustedGridSize;
         const majorTickSpacing = adjustedGridSize * 10;
@@ -398,6 +398,7 @@ export default {
       );
     },
     onDesignSurfaceMouseMove(e) {
+      if (e.target !== this.$refs["design-service-overlay"]) return;
       if (e.buttons === 1) {
         const draggingComponents = this.components.filter((c) => c.dragging);
         if (draggingComponents.length > 0) {

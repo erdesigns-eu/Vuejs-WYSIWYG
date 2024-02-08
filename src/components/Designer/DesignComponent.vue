@@ -32,6 +32,22 @@
     <div class="design-component-resize-handle handle-sc"></div>
     <div class="design-component-resize-handle handle-se"></div>
     <!-- End Resize Handles - BOTTOM -->
+
+    <!-- Label -->
+    <div class="design-component-label">
+      <div class="design-component-label-position">
+        <span class="design-component-label-position-indicator">X&nbsp;</span>
+        <span class="design-component-label-position-x">{{ x }}</span>
+        <span class="design-component-label-position-indicator">Y&nbsp;</span>
+        <span class="design-component-label-position-y">{{ y }}</span>
+      </div>
+      <div class="design-component-label-dimensions">
+        <span class="design-component-label-position-indicator">W&nbsp;</span>
+        <span class="design-component-label-position-x">{{ width }}</span>
+        <span class="design-component-label-position-indicator">H&nbsp;</span>
+        <span class="design-component-label-position-y">{{ height }}</span>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -104,6 +120,12 @@ export default {
     },
     designY() {
       return this.y * (this.zoom() / 100);
+    },
+    positionLabel() {
+      return `X ${this.x}, Y ${this.y}`;
+    },
+    dimensionsLabel() {
+      return `W ${this.width}, H ${this.height}`;
     },
   },
   methods: {
