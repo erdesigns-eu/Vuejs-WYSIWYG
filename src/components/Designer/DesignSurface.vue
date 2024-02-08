@@ -312,7 +312,7 @@ export default {
         const delta = Math.sign(event.deltaY);
         this.$emit(
           "update:zoom",
-          Math.min(Math.max(this.reactiveZoom - delta * 10, 100), 1000)
+          Math.min(Math.max(this.reactiveZoom - delta * 10, 50), 1000)
         );
       }
     },
@@ -345,28 +345,32 @@ export default {
     onDragStart(id, e) {
       const draggedComponent = this.components.find((c) => c.id === id);
       if (draggedComponent) {
-        const draggedComponentPosition = {
-          x: draggedComponent.x,
-          y: draggedComponent.y,
-        };
+        const scaleFactor = this.zoom / 100;
+
+        const adjustedOffsetX = e.offsetX / scaleFactor;
+        const adjustedOffsetY = e.offsetY / scaleFactor;
+
         draggedComponent.draggingOffset = {
-          x: e.offsetX,
-          y: e.offsetY,
+          x: adjustedOffsetX,
+          y: adjustedOffsetY,
         };
+
         this.$emit(
           "update:components",
           this.components.map((c) => {
             if (c.selected) {
               const relativeOffset = {
-                x: draggedComponentPosition.x - c.x + e.offsetX,
-                y: draggedComponentPosition.y - c.y + e.offsetY,
+                x: draggedComponent.x - c.x + adjustedOffsetX,
+                y: draggedComponent.y - c.y + adjustedOffsetY,
               };
               return {
                 ...c,
                 dragging: c.id === id,
                 resizing: false,
                 draggingOffset:
-                  c.id === id ? { x: e.offsetX, y: e.offsetY } : relativeOffset,
+                  c.id === id
+                    ? { x: adjustedOffsetX, y: adjustedOffsetY }
+                    : relativeOffset,
               };
             } else {
               return c;
@@ -401,8 +405,8 @@ export default {
             "update:components",
             this.components.map((c) => {
               if (c.selected) {
-                const offsetX = (e.offsetX - c.draggingOffset.x) * (100 / this.zoom);
-                const offsetY = (e.offsetY - c.draggingOffset.y) * (100 / this.zoom);
+                const offsetX = e.offsetX * (100 / this.zoom) - c.draggingOffset.x;
+                const offsetY = e.offsetY * (100 / this.zoom) - c.draggingOffset.y;
                 let x, y;
                 if (this.snapToGrid) {
                   x = Math.round(offsetX / this.gridSize) * this.gridSize;
