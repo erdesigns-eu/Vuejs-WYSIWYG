@@ -1,0 +1,191 @@
+.listview {
+  display: block;
+  flex: 1;
+  border: 1px solid $listview-border-color;
+  overflow: auto;
+  color: $listview-color;
+  user-select: none;
+  -webkit-user-select: none;
+  box-sizing: border-box;
+
+  .listview-selection-frame {
+    position: absolute;
+    border: 1px solid $primary;
+    background-color: $listview-selection-frame-background-color;
+    z-index: 99999;
+  }
+
+  &.column-resizing {
+    cursor: ew-resize !important;
+
+    .listview-column {
+      cursor: ew-resize !important;
+    }
+  }
+
+  /*&:focus {
+    outline-width: 1px;
+    outline-style: solid;
+    outline-offset: -1px;
+    outline-color: $primary;
+    opacity: 1;
+  }*/
+  &:focus {
+    outline: none;
+  }
+
+  .listview-container {
+    position: relative;
+    display: inline-block;
+    min-width: 100%;
+  }
+
+  .listview-header {
+    position: sticky;
+    display: block;
+    white-space: nowrap;
+    border: 1px solid $listview-border-color;
+    background-color: $listview-header-background-color;
+    padding: 2px;
+    top: 0;
+
+    .listview-column {
+      position: relative;
+      display: inline-block;
+      padding: 4px;
+      box-sizing: border-box;
+      text-overflow: ellipsis;
+      user-select: none;
+      cursor: pointer;
+      border-radius: 2px;
+      background-color: $listview-header-background-color;
+
+      &:last-child {
+        width: auto;
+      }
+
+      .column-resizer {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        right: -7px;
+        top: 0;
+        bottom: 0;
+        touch-action: none;
+        pointer-events: auto;
+        cursor: ew-resize;
+        width: 14px;
+        z-index: 99999;
+
+        .column-resizer-line {
+          width: 2px;
+          height: 100%;
+          transition: background-color 0.1s ease-out;
+          background-color: inherit;
+        }
+
+        &:hover,
+        &.active {
+          .column-resizer-line {
+            background-color: $primary-active;
+          }
+        }
+      }
+    }
+  }
+
+  &.striped {
+    .listview-body {
+      .listview-row:not(.selected):nth-child(odd) {
+        background-color: $listview-row-odd-background-color;
+      }
+    }
+  }
+
+  &:not(.column-resizing) {
+    .listview-header {
+      .listview-column {
+        &:hover {
+          background-color: $listview-header-background-hover-color;
+        }
+
+        &:active {
+          background-color: $listview-header-background-active-color;
+        }
+      }
+    }
+  }
+
+  .listview-body {
+    display: block;
+    white-space: nowrap;
+    padding: 2px 0;
+
+    .listview-row {
+      margin: 2px;
+      border-radius: 2px;
+
+      &.selected {
+        background-color: $listview-row-selected-background-color;
+        color: $white;
+      }
+
+      &.dragging {
+        background-color: $listview-row-selected-background-color !important;
+        color: $white !important;
+      }
+    }
+
+    .listview-cell {
+      display: inline-block;
+      padding: 4px;
+      box-sizing: border-box;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      min-height: 25px;
+
+      &.editing {
+        padding: 0;
+        position: relative;
+      }
+
+      input {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        line-height: 30px;
+        padding-top: 3px;
+        border: none;
+        background-color: transparent;
+        color: $white;
+        outline: none;
+        box-sizing: border-box;
+        font-size: inherit;
+      }
+
+      input[type="number"]::-webkit-inner-spin-button,
+      input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        appearance: none;
+        margin: 0;
+      }
+
+      &:last-child {
+        width: auto;
+      }
+    }
+  }
+
+  &:not(.column-resizing) {
+    .listview-body {
+      .listview-row {
+        &:not(.selected):hover {
+          background-color: $listview-row-hover-background-color;
+        }
+      }
+    }
+  }
+}

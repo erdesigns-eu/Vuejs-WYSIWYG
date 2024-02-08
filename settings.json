@@ -1,0 +1,16 @@
+{
+  "smsbox": {
+    "apiKey": "5dT4v0lVwN7IeAkWhTmtjEnT6MI5MPle1ohxxOHd"
+  },
+  "vonage": {
+    "apiKey": "f8d703c5",
+    "apiSecret": "66Cy5NX0iaBt1CMo"
+  },
+  "textbelt": {
+    "apiKey": "e5dee14744504ae3bbabc95c3da635b686d666ac9LulDj5DVh7U4MiMFHMSGNeFn"
+  },
+  "smstools": {
+    "clientId": "278843515618314361131",
+    "clientSecret": "HS39g4Oh164Nfz2VUDq6O"
+  }
+}

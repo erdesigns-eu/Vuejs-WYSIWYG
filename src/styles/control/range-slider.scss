@@ -1,0 +1,37 @@
+input[type="range"] {
+  -webkit-appearance: none;
+   appearance: none;
+   background: transparent;
+   cursor: pointer;
+}
+
+input[type="range"]:focus {
+ outline: none;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  background: $range-slider-background-color;
+  height: 4px;
+  border-radius: 2px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+ -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  margin-top: -6px; /* Centers thumb on the track */
+
+  background-color: $range-slider-thumb-background-color;
+  height: 16px;
+  width: 16px;  
+  cursor: pointer;
+  border-radius: 50%; 
+  outline: none; 
+}
+
+input[type="range"]:hover::-webkit-slider-thumb {   
+  background-color: $range-slider-thumb-active-background-color;
+}
+
+input[type="range"]:focus::-webkit-slider-thumb {   
+  background-color: $range-slider-thumb-active-background-color;
+}

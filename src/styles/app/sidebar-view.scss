@@ -1,0 +1,62 @@
+.sidebar-view {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  white-space: normal;
+  box-sizing: border-box;
+  overflow: inherit;
+  background-color: $sidebar-view-background-color;
+  color: $sidebar-view-color;
+  outline-color: $sidebar-view-outline-color;
+  position: relative;
+
+  .sidebar-view-title {
+    display: flex;
+    height: $sidebar-view-title-height;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding-left: 8px;
+    padding-right: 8px;
+
+    .title-label {
+      line-height: 35px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      padding-left: 12px;
+
+      h2 {
+        font-size: $sidebar-view-title-font-size;
+        cursor: default;
+        font-weight: 400;
+        margin: 0;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        text-transform: uppercase;
+        color: $sidebar-view-color;
+      }
+    }
+  }
+
+  .sidebar-view-content {
+    font-size: 13px;
+    overflow: hidden;
+    flex: 1;
+  }
+}
+
+.sidebar-view-splitter {
+  height: 100%;
+  touch-action: none;
+  pointer-events: auto;
+  cursor: ew-resize;
+  width: 4px;
+  transition: background-color 0.1s ease-out;
+  background-color: $input-background-color;
+
+  &:hover,
+  &.active {
+    background-color: $primary-active;
+  }
+}

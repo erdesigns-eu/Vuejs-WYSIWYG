@@ -1,0 +1,93 @@
+.app-sidebar {
+  height: 100%;
+  width: $sidebar-width;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: $sidebar-background-color;
+
+  .actions {
+    margin-bottom: auto;
+  }
+
+  .actions,
+  .toolbar {
+    .action-bar {
+      white-space: nowrap;
+      height: 100%;
+
+      .actions-container {
+        display: inline-block;
+        margin: 0 auto;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+
+        .action-item {
+          display: block;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          position: relative;
+          border-left-width: 2px;
+          border-left-color: transparent;
+          border-left-style: solid;
+          color: $white-inactive;
+
+          &:hover {
+            color: $white;
+          }
+
+          &.checked {
+            color: $white;
+            border-left-color: $white;
+          }
+
+          .action-label {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            overflow: hidden;
+            width: $sidebar-width;
+            height: $sidebar-width;
+            margin-right: 0;
+            box-sizing: border-box;
+            font-size: $sidebar-action-label-font-size;
+            align-items: center;
+            justify-content: center;
+            user-select: none;
+            -webkit-user-select: none;
+          }
+
+          .badge {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            left: 0;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+
+            .badge-content {
+              position: absolute;
+              top: 24px;
+              right: 8px;
+              font-size: 9px;
+              font-weight: 600;
+              min-width: 8px;
+              height: 16px;
+              line-height: 16px;
+              padding: 0 4px;
+              border-radius: 20px;
+              text-align: center;
+              color: $sidebar-action-badge-color;
+              background-color: $sidebar-action-badge-background-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}

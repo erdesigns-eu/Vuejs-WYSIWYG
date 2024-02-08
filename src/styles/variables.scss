@@ -1,0 +1,183 @@
+/* Colors */
+$background: #252526;
+$white: rgb(248, 250, 253);
+$white-inactive: rgba(248, 250, 253, 0.5);
+$black: rgb(30, 34, 39);
+$black-inactive: rgba(30, 34, 39, 0.5);
+$focus-border: #3e4452;
+
+$primary: rgb(112, 183, 52);
+$primary-hover: rgb(122, 193, 62);
+$primary-active: rgb(102, 173, 42);
+$primary-inactive: rgba(112, 183, 52, 0.5);
+
+/* Label */
+$label-color: rgb(171, 178, 191);
+$label-font-size: 18px;
+$label-font-weight: 400;
+
+/* Scrollbar */
+$scrollbar-track-color: #232e33;
+$scrollbar-thumb-color: rgba(83, 89, 93, 0.5);
+$scrollbar-thumb-hover-color: rgba(83, 89, 93, 0.7);
+$scrollbar-size: 8px;
+
+/* Titlebar */
+$titlebar-height: 35px;
+$titlebar-active-color: rgba(248, 250, 253, 0.7);
+$titlebar-inactive-color: rgba(248, 250, 253, 0.3);
+$titlebar-background-color: rgb(30, 34, 39);
+$titlebar-button-hover-background-color: rgba(90, 93, 94, 0.46);
+$titlebar-button-active-background-color: rgba(90, 93, 94, 0.36);
+$titlebar-menu-selected-background-color: rgba(90, 93, 94, 0.31);
+
+/* Menu */
+$menu-background-color: rgb(30, 34, 39);
+$menu-color: rgba(248, 250, 253, 0.7);
+$menu-item-hover-background-color: $primary;
+$menu-item-active-background-color: rgba(255, 255, 255, 0.18);
+$menu-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.24);
+
+/* Toolbar */
+$toolbar-background-color: rgb(30, 34, 39);
+$toolbar-color: rgb(171, 178, 191);
+$toolbar-padding: 0 0 4px 0;
+$toolbar-button-border-radius: 5px;
+$toolbar-button-hover-background-color: $titlebar-button-hover-background-color;
+$toolbar-button-active-background-color: $titlebar-button-active-background-color;
+$toolbar-button-disabled-background-color: rgba(83, 89, 93, 0);
+$toolbar-divider-background-color: rgba(255, 255, 255, 0.12);
+
+/* Sidebar */
+$sidebar-width: 48px;
+$sidebar-action-label-font-size: 24px;
+$sidebar-action-badge-color: $white;
+$sidebar-action-badge-background-color: $primary;
+$sidebar-background-color: rgb(30, 34, 39);
+
+/* Sidebar View */
+$sidebar-view-background-color: rgb(30, 34, 39);
+$sidebar-view-color: rgb(171, 178, 191);
+$sidebar-view-outline-color: rgba(83, 89, 93, 0.5);
+$sidebar-view-title-height: 35px;
+$sidebar-view-title-font-size: 11px;
+
+/* Editor View */
+$editor-view-background-color: rgb(30, 34, 39);
+$editor-view-color: rgb(171, 178, 191);
+$editor-view-outline-color: rgba(83, 89, 93, 0.5);
+$editor-view-title-height: 35px;
+$editor-view-title-font-size: 11px;
+
+/* Statusbar */
+$statusbar-height: 22px;
+$statusbar-font-size: 12px;
+$statusbar-background-color: rgb(30, 34, 39);
+$statusbar-color: rgb(157, 165, 180);
+$statusbar-item-hover-background-color: rgba(255, 255, 255, 0.12);
+$statusbar-item-active-background-color: rgba(255, 255, 255, 0.18);
+
+/* Router View */
+$router-view-background-color: rgb(35, 39, 46);
+
+/* Input */
+$input-background-color: rgb(30, 34, 39);
+$input-color: rgb(171, 178, 191);
+$input-border-color: rgba(83, 89, 93, 0.5);
+
+/* Select */
+$select-background-color: rgb(30, 34, 39);
+$select-color: rgb(171, 178, 191);
+$select-border-color: rgba(83, 89, 93, 0.5);
+$select-dropdown-border-color: rgba(83, 89, 93, 0.5);
+$select-dropdown-shadow: 0px 2px 10px 5px rgba(0,0,0,0.5);//0 2px 4px rgba(0, 0, 0, 0.5);
+
+/* Checkbox */
+$checkbox-background-color: rgb(30, 34, 39);
+$checkbox-color: rgb(171, 178, 191);
+$checkbox-border-color: rgba(83, 89, 93, 0.5);
+
+/* Button */
+$button-background-color: rgb(58, 61, 65);
+$button-hover-background-color: rgb(69, 73, 78);
+$button-active-background-color: rgb(59, 63, 78);
+$button-color: $white;
+
+/* ListView */
+$listview-background-color: rgb(30, 34, 39);
+$listview-color: rgb(171, 178, 191);
+$listview-border-color: rgba(83, 89, 93, 0.5);
+$listview-header-background-color: rgb(61, 64, 67);
+$listview-header-background-hover-color: rgb(69, 73, 78);
+$listview-header-background-active-color: rgb(49, 53, 58);
+$listview-row-odd-background-color: rgba(83, 89, 93, 0.2);
+$listview-row-hover-background-color: rgba(112, 183, 52, 0.5);
+$listview-row-selected-background-color: $primary;
+$listview-selection-frame-background-color: rgba(112, 183, 52, 0.5);
+
+/* Listbox */
+$listbox-background-color: rgb(30, 34, 39);
+$listbox-color: rgb(171, 178, 191);
+$listbox-border-color: rgba(83, 89, 93, 0.5);
+$listbox-item-hover-background-color: rgba(112, 183, 52, 0.5);
+$listbox-item-selected-background-color: $primary;
+$listbox-item-selected-color: $white;
+$listbox-item-divider-color: rgba(83, 89, 93, 0.5);
+$listbox-title-color: rgb(171, 178, 191);
+
+/* Range Slider */
+$range-slider-background-color: rgb(77, 102, 56);
+$range-slider-thumb-active-background-color: rgb(112, 183, 52);
+$range-slider-thumb-background-color: rgb(112, 183, 52);
+
+/* EmojiMap */
+$emojimap-background-color: rgb(30, 34, 39);
+$emojimap-color: rgb(171, 178, 191);
+$emojimap-border-color: rgba(83, 89, 93, 0.5);
+$emojimap-item-hover-background-color: rgba(255, 255, 255, 0.1);
+$emojimap-item-border-color: rgba(83, 89, 93, 0.5);
+$emojimap-item-border-radius: 3px;
+$emojimap-shadow: 0px -2px 10px 5px rgba(0,0,0,0.5);
+
+/* Week Calendar */
+$week-calendar-background-color: $background;
+$week-calendar-color: rgb(171, 178, 191);
+$week-calendar-border-color: rgba(83, 89, 93, 0.5);
+$week-calendar-half-hour-border-color: rgba(83, 89, 93, 0.25);
+$week-calendar-header-color: rgb(171, 178, 191);
+$week-calendar-today-color: $primary;
+$week-calendar-now-color: $primary;
+$week-calendar-time-indicator-color: $primary;
+$week-calendar-event-color: $white;
+$week-calendar-event-background-color: rgba(112, 183, 52, 0.85);
+$week-calendar-selected-background-color: rgba(112, 183, 52, 0.5);
+
+/* Inspector */
+$inspector-background-color: rgb(30, 34, 39);
+$inspector-color: rgb(171, 178, 191);
+$inspector-category-header-height: 32px;
+$inspector-category-header-background-color: rgb(30, 34, 39);
+$inspector-category-header-button-width: 20px;
+$inspector-category-header-button-height: 20px;
+$inspector-category-header-button-hover-background-color: rgba(90, 93, 94, 0.31);
+$inspector-category-header-button-active-background-color: rgba(90, 93, 94, 0.46);
+$inspector-property-height: 24px;
+$inspector-property-active-background-color: $primary-active;
+$inspector-property-active-color: $white;
+
+/* Design Surface */
+$design-surface-minimap-background-color: rgb(30, 34, 39);
+$design-surface-minimap-border-color: rgba(83, 89, 93, 0.5);
+$design-surface-minimap-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.1);
+
+$design-component-background-color: rgb(30, 34, 39);
+$design-ruler-width: 25px;
+$design-ruler-height: 25px;
+
+$design-guide-color: rgba(112, 183, 52, 0.5);
+$design-guide-active-color: $primary;
+
+$design-frame-border-color: rgba(112, 183, 52, 0.5);
+$design-handle-background-color: $white;
+$design-handle-border-color: $primary;
+$design-handle-size: 10px;

@@ -1,0 +1,123 @@
+.selectbox {
+  position: relative;
+  width: 100%;
+  text-align: left;
+  outline: none;
+  padding: 2px;
+  cursor: default;
+  border-radius: 2px;
+  box-sizing: border-box;
+  border: 1px solid;
+  font: inherit;
+  background: $select-background-color;
+  color: $select-color;
+  border-color: $select-border-color;
+  user-select: none;
+  -webkit-user-select: none;
+
+  &:focus,
+  &.focus {
+    outline-width: 1px;
+    outline-style: solid;
+    outline-offset: -1px;
+    outline-color: $primary;
+    opacity: 1;
+  }
+
+  .selection {
+    cursor: pointer;
+    user-select: none;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .label {
+      flex: 1;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    .mdi {
+      font-size: 20px;
+      line-height: 16px;
+    }
+  }
+
+  .items {
+    color: $select-color;
+    border-radius: 0 0 2px 2px;
+    overflow: hidden;
+    border: 1px solid $select-border-color;
+    position: absolute;
+    background-color: $select-background-color;
+    left: -1px;
+    right: -1px;
+    z-index: 1;
+    padding: 2px;
+    transform: translateY(2px);
+    box-shadow: $select-dropdown-shadow;
+
+    .items-wrapper {
+      overflow-y: auto;
+      max-height: 200px;
+    }
+    
+    .option {
+      color: $select-color;
+      cursor: pointer;
+      user-select: none;
+      padding: 4px;
+      border-radius: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .label {
+        flex: 1;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+
+      .default {
+        color: $primary;
+      }
+
+      &:first-child {
+        margin-top: 4px;
+      }
+
+      &:last-child {
+        margin-bottom: 4px;
+      }
+
+      &:hover,
+      &.selected {
+        .default {
+          color: $white;
+        }
+
+        background-color: $primary-hover;
+        color: $white;
+      }
+    }
+
+    .description {
+      margin-top: 8px;
+      margin-bottom: 4px;
+      user-select: none;
+      -webkit-user-select: none;
+      white-space: normal;
+      padding: 0 4px;
+      cursor: default;
+    }
+  }
+
+  &:focus {
+    .items {
+      border-color: $primary;
+    }
+  }
+}

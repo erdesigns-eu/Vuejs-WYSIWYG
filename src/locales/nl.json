@@ -1,0 +1,289 @@
+{
+  "Common": {
+    "Default": "Standaard",
+    "NotAvailable": "Niet beschikbaar"
+  },
+  "Days": {
+    "Today": "Vandaag",
+    "1": "Maandag",
+    "2": "Dinsdag",
+    "3": "Woensdag",
+    "4": "Donderdag",
+    "5": "Vrijdag",
+    "6": "Zaterdag",
+    "0": "Zondag"
+  },
+  "DaysShort": {
+    "1": "Ma",
+    "2": "Di",
+    "3": "Wo",
+    "4": "Do",
+    "5": "Vr",
+    "6": "Za",
+    "0": "Zo"
+  },
+  "Months": {
+    "1": "Januari",
+    "2": "Februari",
+    "3": "Maart",
+    "4": "April",
+    "5": "Mei",
+    "6": "Juni",
+    "7": "Juli",
+    "8": "Augustus",
+    "9": "September",
+    "10": "Oktober",
+    "11": "November",
+    "12": "December"
+  },
+  "Sidebar": {
+    "Toolbox": "Gereedschapskist",
+    "Calendar": "Kalender",
+    "Servers": "Servers",
+    "HomeAutomation": "Home Automation",
+    "Music": "Muziek",
+    "Account": "Account",
+    "Settings": "Instellingen"
+  },
+  "Calendar": {
+    "Day": {
+      "Title": "Dag"
+    },
+    "Week": {
+      "Title": "Week"
+    },
+    "Month": {
+      "Title": "Maand"
+    },
+    "Year": {
+      "Title": "Jaar"
+    },
+    "Agenda": {
+      "Title": "Agenda"
+    }
+  },
+  "HomeAutomation": {
+    "Home": {
+      "Title": "Woning",
+      "Home": {
+        "Title": "Thuis"
+      },
+      "Favorites": {
+        "Title": "Favorieten"
+      }
+    },
+    "PhilipsHue": {
+      "Title": "Philips Hue",
+      "Lights": {
+        "Title": "Verlichting"
+      },
+      "Groups": {
+        "Title": "Groepen"
+      },
+      "Schedules": {
+        "Title": "Schema's"
+      },
+      "Scenes": {
+        "Title": "Scenes"
+      },
+      "Sensors": {
+        "Title": "Sensoren"
+      },
+      "Settings": {
+        "Title": "Instellingen"
+      }
+    },
+    "LogitechHarmony": {
+      "Title": "Logitech Harmony",
+      "Activities": {
+        "Title": "Activiteiten"
+      },
+      "Devices": {
+        "Title": "Apparaten"
+      },
+      "Settings": {
+        "Title": "Instellingen"
+      }
+    },
+    "YamahaMusicCast": {
+      "Title": "Yamaha MusicCast",
+      "Devices": {
+        "Title": "Devices"
+      },
+      "Player": {
+        "Title": "Speler"
+      },
+      "Settings": {
+        "Title": "Settings"
+      }
+    }
+  },
+  "Music": {
+    "Youtube": {
+      "Title": "Youtube",
+      "Search": {
+        "Title": "Zoeken",
+        "Placeholder": "Zoek op Youtube.."
+      },
+      "Queue": {
+        "Title": "Afspeellijst",
+        "Views": "{views} weergaven"
+      },
+      "Favorites": {
+        "Title": "Favorieten"
+      },
+      "Playlists": {
+        "Title": "Afspeellijsten"
+      },
+      "Download": {
+        "Title": "Download"
+      }
+    }
+  },
+  "Toolbox": {
+    "SMS": {
+      "Title": "Verzend SMS Bericht",
+      "Provider": "Provider",
+      "Sender": "Verzender",
+      "Recipient": "Ontvanger",
+      "Message": "Bericht",
+      "MessagePlaceholder": "Typ hier je bericht..",
+      "Send": "Verstuur",
+      "Balance": "Saldo",
+      "SuccessTitle": "SMS Verstuurd",
+      "SuccessMessage": "Je SMS naar {recipient} is succesvol verstuurd.",
+      "ErrorTitle": "Fout",
+      "ErrorMessage": "Er is een fout opgetreden tijdens het versturen van je SMS. Probeer het later nog eens.",
+      "CustomSenderSupport": "Aangepaste verzender",
+      "URLSupport": "URL's",
+      "UnicodeSupport": "Unicode",
+      "LongMessageSupport": "Lange berichten",
+      "Loading": "Laden..",
+      "SearchEmojiPlaceholder": "Zoek emoji.."
+    },
+    "Validate": {
+      "Title": "Valideer Telefoonnummer",
+      "Provider": "Provider",
+      "PhoneNumber": "Telefoonnummer",
+      "Validate": "Valideer",
+      "Results": "Resultaten",
+      "Ported": "Geporteerd",
+      "Roaming": "Roaming",
+      "OriginalCarrier": "Originele Provider",
+      "CurrentCarrier": "Huidige Provider",
+      "Country": "Land",
+      "Network": "Netwerk",
+      "Loading": "Laden.."
+    },
+    "Crypto": {
+      "Title": "Crypto Valuta Exchange",
+      "From": "Van",
+      "To": "Naar",
+      "Currency": "Valuta",
+      "Amount": "Bedrag",
+      "Convert": "Converteer",
+      "Results": "Resultaten",
+      "Result": "{amount} {from} is {result} {to}.",
+      "Loading": "Laden.."
+    },
+    "Weather": {
+      "Title": "Weersverwachting",
+      "CurrentTitle": "Huidig Weer",
+      "7DayTitle": "7-daagse Weersverwachting",
+      "HourlyTitle": "Verwachting per Uur",
+      "FeelsLike": "Voelt als {temperature}°",
+      "Max": "Max {temperature}°",
+      "Min": "Min {temperature}°",
+      "Now": "Nu",
+      "200": "Onweersbui met lichte regen",
+      "201": "Onweersbui met regen",
+      "202": "Onweersbui met zware regen",
+      "210": "Lichte onweersbui",
+      "211": "Onweersbui",
+      "212": "Zware onweersbui",
+      "221": "Onregelmatige onweersbui",
+      "230": "Onweersbui met lichte motregen",
+      "231": "Onweersbui met motregen",
+      "232": "Onweersbui met zware motregen",
+      "300": "Lichte motregen",
+      "301": "Motregen",
+      "302": "Zware motregen",
+      "310": "Lichte motregen met regen",
+      "311": "Motregen met regen",
+      "312": "Zware motregen met regen",
+      "313": "Regenbui en motregen",
+      "314": "Zware regenbui en motregen",
+      "321": "Motregenbui",
+      "500": "Lichte regen",
+      "501": "Matige regen",
+      "502": "Zware regen",
+      "503": "Hevige regen",
+      "504": "Extreme regen",
+      "511": "IJzel",
+      "520": "Lichte regenbui",
+      "521": "Regenbui",
+      "522": "Zware regenbui",
+      "531": "Onregelmatige regenbui",
+      "600": "Lichte sneeuw",
+      "601": "Sneeuw",
+      "602": "Zware sneeuw",
+      "611": "Natte sneeuw",
+      "612": "Lichte natte sneeuw",
+      "613": "Natte sneeuw",
+      "615": "Lichte regen en sneeuw",
+      "616": "Regen en sneeuw",
+      "620": "Lichte sneeuwbui",
+      "621": "Sneeuwbui",
+      "622": "Zware sneeuwbui",
+      "701": "Mist",
+      "711": "Rook",
+      "721": "Nevel",
+      "731": "Zand/stof wervelingen",
+      "741": "Mist",
+      "751": "Zand",
+      "761": "Stof",
+      "762": "Vulkanische as",
+      "771": "Stormachtig",
+      "781": "Tornado",
+      "800": "Onbewolkte hemel",
+      "801": "Enkele wolken",
+      "802": "Verspreide wolken",
+      "803": "Halfbewolkte hemel",
+      "804": "Bewolkte hemel",
+      "Thunderstorm": "Thunderstorm",
+      "Drizzle": "Drizzle",
+      "Rain": "Rain",
+      "Snow": "Snow",
+      "Atmosphere": "Atmosphere",
+      "Clear": "Clear sky",
+      "Clouds": "Clouds"
+    },
+    "Map": {
+      "Title": "Kaart",
+      "Search": "Zoeken",
+      "SearchPlaceholder": "Voer een locatie of ip-adres in..",
+      "ZoomIn": "Zoom in",
+      "ZoomOut": "Zoom uit",
+      "Loading": "Laden.."
+    },
+    "IPInfo": {
+      "Title": "IP Lookup",
+      "IP": "IP-adres",
+      "Placeholder": "Voer een IP-adres in..",
+      "Network": "Netwerk",
+      "Version": "Versie",
+      "Country": "Land",
+      "City": "Stad",
+      "Zipcode": "Postcode",
+      "Region": "Regio",
+      "Timezone": "Tijdzone",
+      "Latitude": "Latitude",
+      "Longitude": "Longitude",
+      "Asn": "ASN",
+      "Provider": "Provider",
+      "IP-Lookup": "IP Lookup",
+      "ErrorTitle": "Fout",
+      "Loading": "Laden.."
+    }
+  }
+}

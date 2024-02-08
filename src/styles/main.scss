@@ -1,0 +1,104 @@
+body {
+  color: $white;
+  background-color: $background;
+  min-height: 100vh;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+
+  &.resizing-v {
+    user-select: none;
+    --webkit-user-select: none;
+    cursor: ew-resize;
+  }
+
+  &.windows {
+    font-family: Segoe WPC, Segoe UI, sans-serif;
+  }
+
+  &.mac {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  &.linux {
+    font-family: system-ui, Ubuntu, Droid Sans, sans-serif;
+  }
+
+  .main {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+
+    & > .main-container {
+      flex: 1;
+      display: flex;
+      flex-direction: row;
+      overflow: hidden;
+
+      & > div {
+        display: flex;
+        flex-direction: row;
+        overflow: hidden;
+      }
+
+      .main-center {
+        flex: 1;
+      }
+    }
+
+    & > .main-view {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      font-size: 13px;
+      overflow: hidden;
+      box-sizing: border-box;
+      white-space: nowrap;
+      position: relative;
+      margin-right: 1px;
+    }
+  }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.mdi.mdi-loading {
+  animation: spin 2s infinite linear;
+}
+
+::-webkit-scrollbar {
+  width: $scrollbar-size;
+  height: $scrollbar-size;
+  background: $scrollbar-track-color;
+}
+
+::-webkit-scrollbar-track {
+  background: $scrollbar-track-color;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $scrollbar-thumb-color;
+  border-radius: 2px;
+
+  &:hover {
+    background: $scrollbar-thumb-hover-color;
+  }
+}
+
+::-webkit-scrollbar-corner {
+  background: $scrollbar-track-color;
+}
+
+::selection {
+  background-color: $primary;
+  color: $white;
+}

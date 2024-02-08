@@ -1,0 +1,75 @@
+.app-toolbar {
+  background-color: $toolbar-background-color;
+  color: $toolbar-color;
+  padding: $toolbar-padding;
+  
+  ul {
+    list-style-type: none;
+    padding: 0 0 0 4px;
+    margin: 0;
+    display: flex;
+
+    li.app-toolbar-item {
+      border-radius: $toolbar-button-border-radius;
+
+      .app-toolbar-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        position: relative;
+        width: 32px;
+        height: 32px;
+        padding: 0;
+        border-radius: $toolbar-button-border-radius;
+        font-size: 20px;
+        color: inherit;
+        text-decoration: none;
+        text-rendering: auto;
+        text-align: center;
+        text-transform: none;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        user-select: none;
+        -webkit-user-select: none;
+
+        i.mdi {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        &:hover:not(.disabled) {
+          background-color: $toolbar-button-hover-background-color;
+        }
+
+        &:active:not(.disabled) {
+          background-color: $toolbar-button-active-background-color;
+        }
+
+        &.disabled {
+          cursor: default;
+          opacity: 0.5;
+          background-color: $toolbar-button-disabled-background-color;
+        }
+
+        &.selected {
+          background-color: $toolbar-button-hover-background-color;
+        }
+      }
+
+      .app-toolbar-divider {
+        width: 1px;
+        height: 20px;
+        margin: 4px 8px;
+        background-color: $toolbar-divider-background-color;
+      }
+
+      &:has(.app-toolbar-divider) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}

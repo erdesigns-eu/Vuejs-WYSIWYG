@@ -1,0 +1,97 @@
+.listbox {
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  user-select: none;
+  -webkit-user-select: none;
+
+  &:focus {
+    outline: none;
+  }
+
+  .listbox-container {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    padding: 0 4px;
+    background-color: $listbox-background-color;
+    color: $listbox-color;
+    box-sizing: border-box;
+    gap: 2px;
+  }
+
+  .listbox-item {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 4px;
+    cursor: default;
+    box-sizing: border-box;
+    margin: 0;
+    border-radius: 4px;
+
+    .listbox-item-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      margin-right: 4px;
+    }
+
+    .listbox-item-text {
+      flex: 1;
+      font-size: 14px;
+      font-weight: 400;
+      color: $listbox-color;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    &:hover {
+      background-color: $listbox-item-hover-background-color;
+    }
+
+    &.selected {
+      background-color: $listbox-item-selected-background-color;
+      color: $listbox-item-selected-color;
+
+      .listbox-item-text {
+        color: $listbox-item-selected-color;
+      }
+    }
+  }
+
+  .listbox-item-divider {
+    width: calc(100% - 8px);
+    height: 1px;
+    background-color: $listbox-item-divider-color;
+    margin: 8px 0 8px 4px;
+  }
+
+  .listbox-title-large {
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 4px;
+    margin: 0;
+    color: $listbox-title-color;
+  }
+
+  .listbox-title-small {
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 4px;
+    margin: 0;
+    color: $listbox-title-color;
+  }
+}

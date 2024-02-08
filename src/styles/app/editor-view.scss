@@ -1,0 +1,31 @@
+.editor-view {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  white-space: normal;
+  box-sizing: border-box;
+  overflow: inherit;
+  background-color: $editor-view-background-color;
+  color: $editor-view-color;
+  outline-color: $editor-view-outline-color;
+  position: relative;
+
+  .editor-view-content {
+    font-size: 13px;
+    overflow: hidden;
+  }
+}
+
+.editor-view-splitter {
+  height: 100%;
+  touch-action: none;
+  pointer-events: auto;
+  cursor: ew-resize;
+  width: 4px;
+  transition: background-color 0.1s ease-out;
+
+  &:hover,
+  &.active {
+    background-color: $primary-active;
+  }
+}
