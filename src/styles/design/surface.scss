@@ -93,6 +93,7 @@
     width: calc(100% - $design-ruler-width - 1px);
     height: calc(100% - $design-ruler-height - 1px);
     z-index: 1;
+    outline: none;
 
     &:has(.design-horizontal-guide.active) {
       cursor: ns-resize;
@@ -244,46 +245,6 @@
         box-sizing: border-box;
       }
 
-      .design-component-selection-frame-handle-top {
-        position: absolute;
-        top: -2px;
-        left: 0;
-        width: 100%;
-        height: 4px;
-        box-sizing: border-box;
-        cursor: n-resize;
-      }
-
-      .design-component-selection-frame-handle-right {
-        position: absolute;
-        top: 0;
-        right: -2px;
-        width: 4px;
-        height: 100%;
-        box-sizing: border-box;
-        cursor: e-resize;
-      }
-
-      .design-component-selection-frame-handle-bottom {
-        position: absolute;
-        bottom: -2px;
-        left: 0;
-        width: 100%;
-        height: 4px;
-        box-sizing: border-box;
-        cursor: s-resize;
-      }
-
-      .design-component-selection-frame-handle-left {
-        position: absolute;
-        top: 0;
-        left: -2px;
-        width: 4px;
-        height: 100%;
-        box-sizing: border-box;
-        cursor: w-resize;
-      }
-
       .design-component-resize-handle {
         position: absolute;
         display: none;
@@ -412,6 +373,7 @@
         }
         .design-component-label-position-indicator {
           opacity: 0.5;
+          margin-right: 5px;
         }
       }
 
@@ -441,8 +403,13 @@
         pointer-events: none;
       }
     }
+    &:has(.design-component.resizing) {
+      .design-component {
+        pointer-events: none;
+      }
+    }
 
-    &:not(:has(.design-component.dragging)) {
+    &:not(:has(.design-component.dragging)):not(:has(.design-component.resizing)) {
       .design-horizontal-guide {
         cursor: ns-resize;
 
@@ -475,6 +442,46 @@
           }
         }
       }
+    }
+
+    &:has(.design-vertical-guide.active), &:has(.design-horizontal-guide.active) {
+      .design-component {
+        pointer-events: none;
+      }
+    }
+
+    &:has(.design-component.dragging), &:has(.design-component.resizing) {
+      .design-vertical-guide, .design-horizontal-guide {
+        pointer-events: none;
+      }
+      .design-component {
+        pointer-events: none;
+      }
+    }
+
+    &.resize-nw {
+      cursor: nwse-resize;
+    }
+    &.resize-nc {
+      cursor: ns-resize;
+    }
+    &.resize-ne {
+      cursor: nesw-resize;
+    }
+    &.resize-mw {
+      cursor: ew-resize;
+    }
+    &.resize-me {
+      cursor: ew-resize;
+    }
+    &.resize-sw {
+      cursor: nesw-resize;
+    }
+    &.resize-sc {
+      cursor: ns-resize;
+    }
+    &.resize-se {
+      cursor: nwse-resize;
     }
   }
 

@@ -15,7 +15,7 @@ const activeTitleBarOverlay = {
 const defaultSettings = {};
 
 const about = {
-  copyright: "Ernst Reidinga © 2023",
+  copyright: "Ernst Reidinga © 2024",
   authors: ["Ernst Reidinga"],
   website: "https://erdesigns.dev",
 };

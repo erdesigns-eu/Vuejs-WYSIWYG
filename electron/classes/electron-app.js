@@ -55,7 +55,7 @@ class ElectronApp {
 
     // Disable GPU Acceleration for Windows 7
     if (release().startsWith('6.1')) {
-      app.disableHardwareAcceleration()
+      app.disableHardwareAcceleration();
     }
 
     // Set application name for Windows 10+ notifications
@@ -108,7 +108,7 @@ class ElectronApp {
     });
 
     // listen for the 'update-progress' event
-    this.#ipcMain.on('update-progress', (event, progress) => {
+    this.#ipcMain.on('update-progress', (_, progress) => {
       this.#mainWindow.setProgressBar(Number.parseInt(progress));
     });
 
@@ -236,7 +236,7 @@ class ElectronApp {
     });
 
     // Listen for the 'update-titlebar' event
-    this.#ipcMain.on('update-titlebar', (event, options) => {
+    this.#ipcMain.on('update-titlebar', (_, options) => {
       this.updateTitlebar(options);
     });
 

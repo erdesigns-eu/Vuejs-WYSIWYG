@@ -10,41 +10,61 @@
   >
     <!-- Selection Frame -->
     <div class="design-component-selection-frame"></div>
-    <div class="design-component-selection-frame-handle-top"></div>
-    <div class="design-component-selection-frame-handle-right"></div>
-    <div class="design-component-selection-frame-handle-bottom"></div>
-    <div class="design-component-selection-frame-handle-left"></div>
     <!-- End Selection Frame -->
 
     <!-- Resize Handles - TOP -->
-    <div class="design-component-resize-handle handle-nw"></div>
-    <div class="design-component-resize-handle handle-nc"></div>
-    <div class="design-component-resize-handle handle-ne"></div>
+    <div
+      class="design-component-resize-handle handle-nw"
+      @mousedown="onHandlerMousedown('nw', $event)"
+    ></div>
+    <div
+      class="design-component-resize-handle handle-nc"
+      @mousedown="onHandlerMousedown('nc', $event)"
+    ></div>
+    <div
+      class="design-component-resize-handle handle-ne"
+      @mousedown="onHandlerMousedown('ne', $event)"
+    ></div>
     <!-- End Resize Handles - TOP -->
 
     <!-- Resize Handles - MIDDLE -->
-    <div class="design-component-resize-handle handle-mw"></div>
-    <div class="design-component-resize-handle handle-me"></div>
+    <div
+      class="design-component-resize-handle handle-mw"
+      @mousedown="onHandlerMousedown('mw', $event)"
+    ></div>
+    <div
+      class="design-component-resize-handle handle-me"
+      @mousedown="onHandlerMousedown('me', $event)"
+    ></div>
     <!-- End Resize Handles - MIDDLE -->
 
     <!-- Resize Handles - BOTTOM -->
-    <div class="design-component-resize-handle handle-sw"></div>
-    <div class="design-component-resize-handle handle-sc"></div>
-    <div class="design-component-resize-handle handle-se"></div>
+    <div
+      class="design-component-resize-handle handle-sw"
+      @mousedown="onHandlerMousedown('sw', $event)"
+    ></div>
+    <div
+      class="design-component-resize-handle handle-sc"
+      @mousedown="onHandlerMousedown('sc', $event)"
+    ></div>
+    <div
+      class="design-component-resize-handle handle-se"
+      @mousedown="onHandlerMousedown('se', $event)"
+    ></div>
     <!-- End Resize Handles - BOTTOM -->
 
     <!-- Label -->
     <div class="design-component-label">
       <div class="design-component-label-position">
-        <span class="design-component-label-position-indicator">X&nbsp;</span>
+        <span class="design-component-label-position-indicator">X</span>
         <span class="design-component-label-position-x">{{ x }}</span>
-        <span class="design-component-label-position-indicator">Y&nbsp;</span>
+        <span class="design-component-label-position-indicator">Y</span>
         <span class="design-component-label-position-y">{{ y }}</span>
       </div>
       <div class="design-component-label-dimensions">
-        <span class="design-component-label-position-indicator">W&nbsp;</span>
+        <span class="design-component-label-position-indicator">W</span>
         <span class="design-component-label-position-x">{{ width }}</span>
-        <span class="design-component-label-position-indicator">H&nbsp;</span>
+        <span class="design-component-label-position-indicator">H</span>
         <span class="design-component-label-position-y">{{ height }}</span>
       </div>
     </div>
@@ -64,6 +84,7 @@ export default {
     "update:resizing",
     "select",
     "dragStart",
+    "resizeStart",
   ],
   props: {
     id: {
@@ -142,6 +163,15 @@ export default {
     onMouseUp() {
       this.$emit("update:dragging", false);
       this.$emit("update:resizing", false);
+    },
+    onHandlerMousedown(handler, e) {
+      if (!this.selected) return;
+      if (
+        e.target.classList.contains("design-component-resize-handle") ||
+        e.target.classList.contains("frame-handle")
+      ) {
+        this.$emit("resizeStart", this.id, handler, e);
+      }
     },
   },
   watch: {
